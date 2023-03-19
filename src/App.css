@@ -16,7 +16,7 @@
 }
 
 .app {
-font-family: Flexo-Regular, arial;
+    font-family: Flexo-Regular, arial;
 }
 
 .header-title {
@@ -32,7 +32,6 @@ font-family: Flexo-Regular, arial;
     margin-bottom: 15%;
     margin-left: 2%;
     margin-right: 2%;
-    overflow: visible;
 }
 
 .pokemon-card {
@@ -52,16 +51,26 @@ font-family: Flexo-Regular, arial;
     text-align: left;
 }
 
-a:link { text-decoration: none; color: black;}
+a:link {
+    text-decoration: none;
+    color: black;
+}
 
 
-a:visited { text-decoration: none; color: black;}
+a:visited {
+    text-decoration: none;
+    color: black;
+}
 
 
-a:hover { text-decoration: none;}
+a:hover {
+    text-decoration: none;
+}
 
 
-a:active { text-decoration: none; }
+a:active {
+    text-decoration: none;
+}
 
 .pokemon-name {
     font-size: 1.7rem;
@@ -93,7 +102,7 @@ a:active { text-decoration: none; }
 }
 
 .buttons button {
-    background-color: #F05365; 
+    background-color: #F05365;
     border-width: 0;
     color: ghostwhite;
     width: 15%;
@@ -104,4 +113,31 @@ a:active { text-decoration: none; }
 
 .loading {
     text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+    .pokedex {
+        grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+        margin-bottom: 40%;
+    }
+
+    .number {
+        font-size: .6rem;
+    }
+
+    .pokemon-name {
+        font-size: .9rem;
+    }
+
+    .test-type {
+        padding: 0px 2px;
+        width: 50px;
+    }
+
+.buttons button {
+    width: 30%;
+    height: 50px;
+    margin-bottom: 5%;
+}
+
 }
