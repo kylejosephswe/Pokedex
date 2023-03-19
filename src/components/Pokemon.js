@@ -16,6 +16,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
       setNumber(data.id)
       setTypes(data.types)
       setIsLoading(false)
+      console.log(data.types)
     }
     retrievePokemonSprite()
   }, [pokemonURL])
@@ -36,21 +37,42 @@ function Pokemon({ pokemonName, pokemonURL }) {
     return
   }
 
-  /*
+  const typeTable = {
+    'grass': '#9bcc50',
+    'poison': '#b97fc9',
+    'fire': '#fd7d24',
+    'water': '#4592c4',
+    'flying': '#3dc7ef',
+    'fairy': '#fdb9e9',
+    'ground': '#f7de3f',
+    'normal': '#a4acaf',
+    'fighting': '#d56723',
+    'psychic': '#f366b9',
+    'rock': '#a38c21',
+    'electric': '#eed535',
+    'steel': '#9eb7b8',
+    'ghost': '#7b62a3',
+    'ice': '#51c4e7',
+    'dragon': '#53a4cf'
+  }
+
   const displayTypes = () => {
+    if(!types || types.length === 0)
+    {
+      return
+    }
     if (types.length > 1) {
-      return <div>
-        <p>{types[0].type.name}</p>
-        <p>{types[1].type.name}</p>
+      return <div className="multi-type">
+        <p style={{backgroundColor: typeTable[types[0].type.name]}} >{types[0].type.name}</p>
+        <p style={{backgroundColor: typeTable[types[1].type.name]}}>{types[1].type.name}</p>
       </div>
     }
     else {
-      return <p>
+      return <p style={{backgroundColor: typeTable[types[0].type.name]}}>
         {types[0].type.name}
       </p>
     }
   }
-*/
 
   return (
     <div className="pokemon-card">
@@ -59,7 +81,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
       }
       {renderNumber()}
       <h4 className="pokemon-name">{pokemonName}</h4>
-      {/*displayTypes()*/}
+      {displayTypes()}
     </div>
   )
 }

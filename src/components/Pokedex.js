@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import Pokemon from './Pokemon'
 function Pokedex() {
   const [pokemon, setPokemon] = useState([])
-  const [previous, setPrevious] = useState('')
-  const [next, setNext] = useState('')
+  const [previous, setPrevious] = useState(null)
+  const [next, setNext] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function Pokedex() {
     </div>
     <div className="buttons">
       {previous ? <button onClick={() => updatePrevious()} >Previous Pokemon</button> : null}
-      <button onClick={() => updateNext()} >Next Pokemon</button>
+      {next && <button onClick={() => updateNext()} >Next Pokemon</button>}
     </div>
     </>
   )

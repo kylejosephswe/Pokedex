@@ -41,6 +41,12 @@
     font-size: 1.7rem;
 }
 
+.multi-type {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
 .buttons {
    display: flex;
    flex-direction: row; 
