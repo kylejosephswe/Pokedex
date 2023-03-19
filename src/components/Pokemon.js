@@ -50,7 +50,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
     'bug': '#729f3f',
     'flying': '#3dc7ef',
     'fairy': '#fdb9e9',
-    'ground': '#f7de3f',
+    'ground': '#ab9842',
     'normal': '#a4acaf',
     'fighting': '#d56723',
     'psychic': '#f366b9',
@@ -59,6 +59,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
     'steel': '#9eb7b8',
     'ghost': '#7b62a3',
     'ice': '#51c4e7',
+    'dark': '#707070',
     'dragon': '#53a4cf'
   }
 
