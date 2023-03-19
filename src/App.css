@@ -1,14 +1,9 @@
+/* DESKTOP DESIGNS*/
+
 * {
     margin: 0;
     padding: 0;
 }
-
-/*
-@font-face {
-    font-family: Flexo-Regular;
-    src: local('Flexo-Regular') url("./fonts/FlexoRegular.ttf") format("opentype");
-}
-*/
 
 @font-face {
     font-family: Flexo-Regular;
@@ -111,9 +106,15 @@ a:active {
     border-radius: 4%;
 }
 
+.buttons button:hover {
+    cursor: pointer;
+}
+
 .loading {
     text-align: center;
 }
+
+/* MOBILE DESIGNS */
 
 @media only screen and (max-width: 480px) {
     .pokedex {
@@ -134,10 +135,10 @@ a:active {
         width: 50px;
     }
 
-.buttons button {
-    width: 30%;
-    height: 50px;
-    margin-bottom: 5%;
-}
+    .buttons button {
+        width: 30%;
+        height: 50px;
+        margin-bottom: 5%;
+    }
 
 }

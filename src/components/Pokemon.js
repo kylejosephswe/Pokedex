@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 
 function Pokemon({ pokemonName, pokemonURL }) {
 
+  //Stores the state data values.
   const [sprite, setSprite] = useState('')
   const [number, setNumber] = useState('')
   const [types, setTypes] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  //Updates the state of the app.
   useEffect(() => {
     setIsLoading(true)
     const retrievePokemonSprite = async () => {
@@ -21,6 +23,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
     retrievePokemonSprite()
   }, [pokemonURL])
 
+  //Renders the number to the screen with the appropriate amount of zeros.
   const renderNumber = () => {
     if (number < 10) {
       return <p className="number">{'#000' + number.toString()}</p>
@@ -37,7 +40,9 @@ function Pokemon({ pokemonName, pokemonURL }) {
     return
   }
 
+  //Hashtable made with key 'type', and value 'color' to allow for efficient type coloring code.
   const typeTable = {
+    //type  : color
     'grass': '#9bcc50',
     'poison': '#b97fc9',
     'fire': '#fd7d24',
@@ -57,6 +62,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
     'dragon': '#53a4cf'
   }
 
+  //Returns the types for the pokemon depending on if the Pokemon has one or two types.
   const displayTypes = () => {
     if(!types || types.length === 0)
     {
