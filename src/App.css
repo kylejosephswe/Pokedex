@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+/*
+@font-face {
+    font-family: Flexo-Regular;
+    src: local('Flexo-Regular') url("./fonts/FlexoRegular.ttf") format("opentype");
+}
+*/
+
+@font-face {
+    font-family: Flexo-Regular;
+    src: url("./fonts/Flexo-Regular.ttf");
+}
+
+.app {
+font-family: Flexo-Regular, arial;
+}
+
 .header-title {
     text-align: center;
     margin-top: 1%;
