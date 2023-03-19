@@ -8,7 +8,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
   const [types, setTypes] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  //Updates the state of the app.
+  //Updates the state data values by calling the API.
   useEffect(() => {
     setIsLoading(true)
     const retrievePokemonSprite = async () => {

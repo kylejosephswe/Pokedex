@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 import Pokemon from './Pokemon'
+
 function Pokedex() {
+  
+  //Stores the state data values.
   const [pokemon, setPokemon] = useState([])
   const [previous, setPrevious] = useState(null)
   const [next, setNext] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
 
+  //Updates the state data values by calling the API.
   useEffect(() => {
   const retrievePokemonName = async () => {
     setIsLoading(true)
@@ -19,6 +23,8 @@ function Pokedex() {
     retrievePokemonName()
   }, [])
 
+
+  //Updates the screen by calling the API on click of the next button, and stores the next 20 Pokemon in the state variables. 
   const updateNext = async () => {
     setIsLoading(true)
     const response = await fetch(`${next}`)
@@ -29,6 +35,7 @@ function Pokedex() {
     setIsLoading(false)
   }
 
+  //Updates the screen by calling the API on click of the previous button, and stores the previous 20 Pokemon in the state variables. 
   const updatePrevious = async () => {
     setIsLoading(true)
     const response = await fetch(`${previous}`)
