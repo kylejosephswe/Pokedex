@@ -80,7 +80,9 @@ function Pokemon({ pokemonName, pokemonURL }) {
         <img className="pokemon-sprite" src={sprite} alt="pokemon sprite"></img>
       }
       {renderNumber()}
+        <a href={`https://www.pokemon.com/us/pokedex/${pokemonName}`} target="_blank" rel="noreferrer">
       <h4 className="pokemon-name">{pokemonName}</h4>
+        </a>
       {displayTypes()}
     </div>
   )

@@ -22,13 +22,13 @@ font-family: Flexo-Regular, arial;
 .header-title {
     text-align: center;
     margin-top: 1%;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 .pokedex {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-    gap: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    gap: 2% 0%;
     margin-bottom: 15%;
     margin-left: 2%;
     margin-right: 2%;
@@ -38,7 +38,6 @@ font-family: Flexo-Regular, arial;
 .pokemon-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -52,6 +51,17 @@ font-family: Flexo-Regular, arial;
     margin-top: 1%;
     text-align: left;
 }
+
+a:link { text-decoration: none; color: black;}
+
+
+a:visited { text-decoration: none; color: black;}
+
+
+a:hover { text-decoration: none;}
+
+
+a:active { text-decoration: none; }
 
 .pokemon-name {
     font-size: 1.7rem;
@@ -86,7 +96,8 @@ font-family: Flexo-Regular, arial;
     background-color: black;
     color: white;
     width: 15%;
-    height: 30px;
+    height: 50px;
+    font-size: 1.2rem;
 }
 
 .loading {
