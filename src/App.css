@@ -44,15 +44,26 @@
 .multi-type {
     display: flex;
     flex-direction: row;
-    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 1%;
+}
+
+.test-type {
+    padding: 5px 20px;
+    width: 50px;
+    border-radius: 4%;
+    margin-top: 1%;
+    text-align: center;
 }
 
 .buttons {
-   display: flex;
-   flex-direction: row; 
-   justify-content:space-around;
-   align-items: center;
-   margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2%;
 }
 
 .buttons button {

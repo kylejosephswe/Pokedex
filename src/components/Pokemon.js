@@ -42,6 +42,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
     'poison': '#b97fc9',
     'fire': '#fd7d24',
     'water': '#4592c4',
+    'bug': '#729f3f',
     'flying': '#3dc7ef',
     'fairy': '#fdb9e9',
     'ground': '#f7de3f',
@@ -63,14 +64,13 @@ function Pokemon({ pokemonName, pokemonURL }) {
     }
     if (types.length > 1) {
       return <div className="multi-type">
-        <p style={{backgroundColor: typeTable[types[0].type.name]}} >{types[0].type.name}</p>
-        <p style={{backgroundColor: typeTable[types[1].type.name]}}>{types[1].type.name}</p>
+        <span className="test-type" style={{backgroundColor: typeTable[types[0].type.name]}} >{types[0].type.name}</span>
+        <span className="test-type" style={{backgroundColor: typeTable[types[1].type.name]}}>{types[1].type.name}</span>
       </div>
     }
     else {
-      return <p style={{backgroundColor: typeTable[types[0].type.name]}}>
-        {types[0].type.name}
-      </p>
+      return <span className="test-type" style={{backgroundColor: typeTable[types[0].type.name]}}>
+        {types[0].type.name}</span>
     }
   }
 
