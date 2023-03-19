@@ -48,8 +48,8 @@ function Pokedex() {
       ) }
     </div>
     <div className="buttons">
-      {previous ? <button onClick={() => updatePrevious()} >Previous Pokemon</button> : null}
-      {next && <button onClick={() => updateNext()} >Next Pokemon</button>}
+      {previous ? <button onClick={() => updatePrevious()} >Previous Page</button> : null}
+      {next && <button onClick={() => updateNext()} >Next Page</button>}
     </div>
     </>
   )

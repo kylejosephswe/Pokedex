@@ -93,11 +93,13 @@ a:active { text-decoration: none; }
 }
 
 .buttons button {
-    background-color: black;
-    color: white;
+    background-color: #F05365; 
+    border-width: 0;
+    color: ghostwhite;
     width: 15%;
     height: 50px;
     font-size: 1.2rem;
+    border-radius: 4%;
 }
 
 .loading {
