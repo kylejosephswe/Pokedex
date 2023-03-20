@@ -1,26 +1,4 @@
-import { useState, useEffect } from 'react'
-
-function Pokemon({ pokemonName, pokemonURL }) {
-
-  //Stores the state data values.
-  const [sprite, setSprite] = useState('')
-  const [number, setNumber] = useState('')
-  const [types, setTypes] = useState([])
-  const [isLoading, setIsLoading] = useState(true)
-
-  //Updates the state data values by calling the API.
-  useEffect(() => {
-    setIsLoading(true)
-    const retrievePokemonSprite = async () => {
-      const response = await fetch(`${pokemonURL}`)
-      const data = await response.json()
-      setSprite(data.sprites.front_default)
-      setNumber(data.id)
-      setTypes(data.types)
-      setIsLoading(false)
-    }
-    retrievePokemonSprite()
-  }, [pokemonURL])
+function Pokemon({ pokemonName, pokemonURL, sprite, types, number}) {
 
   //Renders the number to the screen with the appropriate amount of zeros.
   const renderNumber = () => {
@@ -82,9 +60,7 @@ function Pokemon({ pokemonName, pokemonURL }) {
 
   return (
     <div className="pokemon-card">
-      {isLoading ? <h2>Loading...</h2> :
-        <img className="pokemon-sprite" src={sprite} alt="pokemon sprite"></img>
-      }
+      <img className="pokemon-sprite" src={sprite} alt="pokemon sprite"></img>
       {renderNumber()}
         <a href={`https://www.pokemon.com/us/pokedex/${pokemonName}`} target="_blank" rel="noreferrer">
       <h4 className="pokemon-name">{pokemonName}</h4>
