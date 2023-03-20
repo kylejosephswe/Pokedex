@@ -18,7 +18,6 @@ function Pokemon({ pokemonName, pokemonURL }) {
       setNumber(data.id)
       setTypes(data.types)
       setIsLoading(false)
-      console.log(data.types)
     }
     retrievePokemonSprite()
   }, [pokemonURL])
