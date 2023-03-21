@@ -17,8 +17,20 @@ const PokemonProvider = ({children}) => {
   //Stores the 151 pokemon state data as an object.
   const [pokemon151, setPokemon151] = useState([])
 
+  //Search bar
+  const [search, setSearch] = useState('')
+
     return (
-        <PokemonContext.Provider value={{pokemon, setPokemon, previous, setPrevious, next, setNext, isLoading, setIsLoading, sprite, setSprite, number, setNumber, types, setTypes, pokemon151, setPokemon151}}>
+        <PokemonContext.Provider value={{pokemon, setPokemon, 
+                                         previous, setPrevious, 
+                                         next, setNext, 
+                                         isLoading, setIsLoading, 
+                                         sprite, setSprite, 
+                                         number, setNumber, 
+                                         types, setTypes, 
+                                         pokemon151, setPokemon151, 
+                                         search, setSearch,
+                                         }}>
             {children}
         </PokemonContext.Provider>
     )

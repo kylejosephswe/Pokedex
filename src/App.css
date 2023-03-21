@@ -15,15 +15,50 @@
 }
 
 .header-title {
-    text-align: center;
     margin-top: 1%;
+    margin-bottom: 1%;
+    cursor: pointer;
+    width: 260px;
+    margin: 1% auto;
+    text-align: center;
+}
+
+.search-bar-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 2%;
+}
+
+.search-bar {
+    border-radius: 3%;
+    border-width: 0;
+    border-color: white;
+    background-color: #F05365;
+    color: white;
+    height: 40px;
+    width: 250px;
+    padding: 0% 0.5%;
+}
+
+.search-bar[text="text"] {
+    color: white;
+    background-color: white;
+}
+
+.search-bar::placeholder {
+    color: white;
+}
+
+.search-bar:focus {
+    outline-color: #F05365;
 }
 
 .pokedex {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
-    gap: 2% 0%;
+    gap: .5% 0%;
     margin-bottom: 15%;
     margin-left: 2%;
     margin-right: 2%;
