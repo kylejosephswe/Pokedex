@@ -6,7 +6,6 @@ function App() {
   return (
     <PokemonProvider>
       <div className="app">
-        {/* <SearchBar /> */}
         <Pokedex />
       </div>
     </PokemonProvider>

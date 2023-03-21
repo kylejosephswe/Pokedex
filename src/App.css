@@ -10,8 +10,14 @@
     src: url("./fonts/Flexo-Regular.ttf");
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .app {
     font-family: Flexo-Regular, arial;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-title {
@@ -57,11 +63,16 @@
 
 .pokedex {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20%, 4fr));
     gap: .5% 0%;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     margin-left: 2%;
     margin-right: 2%;
+    overflow-y: scroll;
+}
+
+.pokedex::-webkit-scrollbar {
+    display: none;
 }
 
 .pokemon-card {
@@ -154,7 +165,7 @@ a:active {
 @media only screen and (max-width: 480px) {
     .pokedex {
         grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
-        margin-bottom: 40%;
+        margin-bottom: 5%;
     }
 
     .number {
