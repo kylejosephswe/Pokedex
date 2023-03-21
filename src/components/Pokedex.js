@@ -17,7 +17,6 @@ function Pokedex() {
 
   const retrievePokemonName = async () => {
     setIsLoading(true);
-    //const response = await fetch(`https://pokeapi.co/api/v2/pokemon/`);
     const response = await fetch(
       `https://pokeapi.co/api/v2/pokemon?limit=151&offset=0`
     );

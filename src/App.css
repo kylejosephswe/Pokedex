@@ -187,4 +187,17 @@ a:active {
         margin-bottom: 5%;
     }
 
+.search-bar {
+    border-radius: 3%;
+    border-width: 0;
+    border-color: white;
+    background-color: #F05365;
+    color: white;
+    height: 30px;
+    width: 150px;
+    padding: 0% 0% 0% 3%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
 }
