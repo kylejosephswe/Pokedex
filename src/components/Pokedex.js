@@ -143,6 +143,7 @@ function Pokedex() {
         />
       </div>
       <div className="app">
+        <div className="pokedex-container">
       <div className="pokedex">
         {isLoading ? (
           <h1 className="loading">Loading...</h1>
@@ -158,6 +159,7 @@ function Pokedex() {
             />
           ))
         )}
+      </div>
       </div>
       <div className="buttons">
         {previous ? (

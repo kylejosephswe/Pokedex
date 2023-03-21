@@ -61,14 +61,24 @@ body::-webkit-scrollbar {
     outline-color: #F05365;
 }
 
+.pokedex-container {
+    height: 75vh;
+    overflow: scroll;
+    margin-bottom: 1%;
+}
+
+.pokedex-container::-webkit-scrollbar {
+    display: none;
+}
+
 .pokedex {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20%, 4fr));
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     gap: .5% 0%;
     margin-bottom: 5%;
     margin-left: 2%;
     margin-right: 2%;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 
 .pokedex::-webkit-scrollbar {
@@ -139,7 +149,7 @@ a:active {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
 .buttons button {
@@ -163,9 +173,13 @@ a:active {
 /* MOBILE DESIGNS */
 
 @media only screen and (max-width: 480px) {
+    .pokedex-container {
+        margin-bottom: 4%;
+    }
+
     .pokedex {
         grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
-        margin-bottom: 5%;
+        /* margin-bottom: 1%; */
     }
 
     .number {
@@ -184,7 +198,7 @@ a:active {
     .buttons button {
         width: 30%;
         height: 50px;
-        margin-bottom: 5%;
+        margin-bottom: 1%;
     }
 
 .search-bar {
