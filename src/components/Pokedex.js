@@ -1,4 +1,4 @@
-import { useEffect, useContext} from "react";
+import { useState, useEffect, useContext} from "react";
 import { PokemonContext } from ".././context/PokemonContext";
 import { BarLoader } from "react-spinners";
 import Pokemon from "./Pokemon";
@@ -152,6 +152,7 @@ function Pokedex() {
                 )
               : retrievePokemonName()
           }
+
         />
       </div>
       <div className="app">

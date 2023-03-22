@@ -11,6 +11,9 @@ function Pokemon({ pokemonName, pokemonURL, sprite, types, number}) {
     else if (number < 1000) {
       return <p>{'#0' + number.toString()}</p>
     }
+    else if (number === 1000) {
+      return <p>{'#' + number.toString()}</p>
+    }
     else if (number > 1000) {
       return <p>{'#' + number.toString()}</p>
     }
