@@ -42,9 +42,10 @@ body::-webkit-scrollbar {
     border-color: white;
     background-color: #F05365;
     color: white;
-    height: 40px;
-    width: 250px;
+    height: 45px;
+    width: 275px;
     padding: 0% 0.5%;
+    font-size: 1.15rem;
 }
 
 .search-bar[text="text"] {
@@ -173,7 +174,21 @@ a:active {
     .pokedex-container {
         height: 65vh;
     }
+
+    .search-bar {
+    border-radius: 3%;
+    border-width: 0;
+    border-color: white;
+    background-color: #F05365;
+    color: white;
+    height: 45px;
+    width: 275px;
+    padding: 0% 0.5%;
+    font-size: 1.15rem;
+    }
+
 }
+
 /* TABLET VIEWPORT */
 
 @media only screen and (min-width: 501px) and (max-width: 1000px) {
@@ -227,7 +242,6 @@ a:active {
         height: 50px;
         margin-bottom: 1%;
     }
-
 
 }
 
