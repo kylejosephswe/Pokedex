@@ -78,7 +78,6 @@ body::-webkit-scrollbar {
     margin-bottom: 5%;
     margin-left: 2%;
     margin-right: 2%;
-    /* overflow-y: scroll; */
 }
 
 .pokedex::-webkit-scrollbar {
@@ -170,10 +169,17 @@ a:active {
     text-align: center;
 }
 
+/* LAPTOP VIEWPORT */
+
 @media only screen and (min-width: 1001px) and (max-width: 1500px) {
-    .pokedex-container {
-        height: 65vh;
-    }
+
+.header-title {
+    cursor: pointer;
+    width: 300px;
+    margin: 1% auto 1% auto;
+    text-align: center;
+    font-size: 2.15rem;
+}
 
     .search-bar {
     border-radius: 3%;
@@ -187,6 +193,13 @@ a:active {
     font-size: 1.15rem;
     }
 
+    .pokedex-container {
+        height: 68vh;
+    }
+
+    .pokemon-name {
+        margin: -2% 0%;
+    }
 }
 
 /* TABLET VIEWPORT */
