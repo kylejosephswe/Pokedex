@@ -287,8 +287,9 @@ a:active {
     }
 
     .test-type {
-        padding: 0px 2px;
-        width: 50px;
+        padding: 0px 3px;
+        width: 42px;
+        font-size: .7rem;
     }
 
     .buttons button {
