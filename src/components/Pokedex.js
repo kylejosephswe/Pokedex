@@ -1,6 +1,12 @@
 import { useEffect, useContext} from "react";
 import { PokemonContext } from ".././context/PokemonContext";
+import { BarLoader } from "react-spinners";
 import Pokemon from "./Pokemon";
+
+const override = { display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 function Pokedex() {
   const pokedexContext = useContext(PokemonContext);
@@ -146,7 +152,14 @@ function Pokedex() {
         <div className="pokedex-container">
       <div className="pokedex">
         {isLoading ? (
-          <h1 className="loading">Loading...</h1>
+          <BarLoader
+          color= "#F05365"
+          loading={isLoading}
+          cssOverride={override}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
         ) : (
           pokemon.map((individualPokemon) => (
             <Pokemon
