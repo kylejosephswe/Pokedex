@@ -135,7 +135,7 @@ function Pokedex() {
             e.target.value.length > 0
               ? setPokemon((prev) =>
                   prev.filter((pokemonData) =>
-                    pokemonData.nameAndURL.name.includes(e.target.value)
+                    pokemonData.nameAndURL.name.includes(e.target.value.toLowerCase())
                   )
                 )
               : retrievePokemonName()
