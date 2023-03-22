@@ -8,6 +8,7 @@ const PokemonProvider = ({children}) => {
   const [previous, setPrevious] = useState(null)
   const [next, setNext] = useState(null)
   const [isLoading, setIsLoading] = useState(true) 
+  const [pageCount, setPageCount] = useState(0)
 
   //Stores the state data values.
   const [sprite, setSprite] = useState(null)
@@ -26,6 +27,7 @@ const PokemonProvider = ({children}) => {
                                          number, setNumber, 
                                          types, setTypes, 
                                          pokemon151, setPokemon151, 
+                                         pageCount, setPageCount,
                                          }}>
             {children}
         </PokemonContext.Provider>

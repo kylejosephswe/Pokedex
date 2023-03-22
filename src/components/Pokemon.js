@@ -58,7 +58,7 @@ function Pokemon({ pokemonName, pokemonURL, sprite, types, number}) {
     }
   }
 
-  return (
+  return number > 1008 ? null : (
     <div className="pokemon-card">
       <img className="pokemon-sprite" src={sprite} alt="pokemon sprite"></img>
       {renderNumber()}

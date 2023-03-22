@@ -3,6 +3,7 @@ import { PokemonContext } from ".././context/PokemonContext";
 import { BarLoader } from "react-spinners";
 import Pokemon from "./Pokemon";
 
+
 const override = { display: "block",
   margin: "0 auto",
   borderColor: "red",
@@ -19,6 +20,8 @@ function Pokedex() {
     setNext,
     previous,
     setPrevious,
+    pageCount,
+    setPageCount,
   } = pokedexContext;
 
   const retrievePokemonName = async () => {
@@ -53,6 +56,7 @@ function Pokedex() {
 
     setPokemon(formattedPokemonData);
     setIsLoading(false);
+    setPageCount(0)
   };
 
   //Updates the state data values by calling the API.
@@ -92,6 +96,7 @@ function Pokedex() {
 
     setPokemon(formattedPokemonData);
     setIsLoading(false);
+    setPageCount(prev => prev + 1)
   };
 
   //Updates the screen by calling the API on click of the previous button, and stores the previous 20 Pokemon in the state variables.
@@ -125,6 +130,7 @@ function Pokedex() {
 
     setPokemon(formattedPokemonData);
     setIsLoading(false);
+    setPageCount(prev => prev - 1)
   };
 
   return (
@@ -150,7 +156,7 @@ function Pokedex() {
       </div>
       <div className="app">
         <div className="pokedex-container">
-      <div className="pokedex">
+      {/* <div className="pokedex"> */}
         {isLoading ? (
           <BarLoader
           color= "#F05365"
@@ -161,7 +167,8 @@ function Pokedex() {
           data-testid="loader"
         />
         ) : (
-          pokemon.map((individualPokemon) => (
+      <div className="pokedex">
+          {pokemon.map((individualPokemon) => (
             <Pokemon
               key={individualPokemon.nameAndURL.name}
               pokemonName={individualPokemon.nameAndURL.name}
@@ -170,15 +177,16 @@ function Pokedex() {
               types={individualPokemon.types}
               number={individualPokemon.id}
             />
-          ))
+          ))}
+          </div>
         )}
       </div>
-      </div>
+      {/* </div> */}
       <div className="buttons">
         {previous ? (
           <button onClick={() => updatePrevious()}>Previous Page</button>
         ) : null}
-        {next && <button onClick={() => updateNext()}>Next Page</button>}
+        {pageCount < 6 && next ? <button onClick={() => updateNext()}>Next Page</button> : null}
       </div>
       </div>
     </>
